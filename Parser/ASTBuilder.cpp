@@ -30,7 +30,7 @@ using namespace std;
 
 namespace AJSC {
 
-void ASTBuilder::parse(string script) {
+void Parser::ASTBuilder::parse(string script) {
 
 }
 
