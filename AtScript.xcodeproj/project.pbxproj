@@ -34,15 +34,15 @@
 		8E2FDFA51A07ED450038C1E4 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		8E2FDFA71A07ED450038C1E4 /* ASTBuilder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ASTBuilder.cpp; sourceTree = "<group>"; };
 		8E2FDFA81A07ED450038C1E4 /* ASTBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASTBuilder.h; sourceTree = "<group>"; };
-		8E2FDFA91A07ED450038C1E4 /* Keyword.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Keyword.h; sourceTree = "<group>"; };
+		8E2FDFA91A07ED450038C1E4 /* Keywords.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Keywords.h; sourceTree = "<group>"; };
 		8E2FDFAA1A07ED450038C1E4 /* Lexer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Lexer.cpp; sourceTree = "<group>"; };
 		8E2FDFAB1A07ED450038C1E4 /* Lexer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lexer.h; sourceTree = "<group>"; };
-		8E2FDFAC1A07ED450038C1E4 /* ReserveWords.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReserveWords.h; sourceTree = "<group>"; };
 		8E2FDFAE1A07ED450038C1E4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8E2FDFB81A07EF260038C1E4 /* ajs.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ajs.cpp; sourceTree = "<group>"; };
 		8E2FDFBE1A07F3DD0038C1E4 /* AtScript */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = AtScript; path = /Users/tinganho/Development/AtScript/Build/Debug/AtScript; sourceTree = "<absolute>"; };
 		8E2FDFBF1A07F9930038C1E4 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		8E2FDFC01A07F9A30038C1E4 /* .editorconfig */ = {isa = PBXFileReference; lastKnownFileType = text; path = .editorconfig; sourceTree = "<group>"; };
+		8E2FDFC11A07FC4E0038C1E4 /* Keywords.table */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Keywords.table; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,10 +88,10 @@
 			children = (
 				8E2FDFA71A07ED450038C1E4 /* ASTBuilder.cpp */,
 				8E2FDFA81A07ED450038C1E4 /* ASTBuilder.h */,
-				8E2FDFA91A07ED450038C1E4 /* Keyword.h */,
+				8E2FDFA91A07ED450038C1E4 /* Keywords.h */,
 				8E2FDFAA1A07ED450038C1E4 /* Lexer.cpp */,
 				8E2FDFAB1A07ED450038C1E4 /* Lexer.h */,
-				8E2FDFAC1A07ED450038C1E4 /* ReserveWords.h */,
+				8E2FDFC11A07FC4E0038C1E4 /* Keywords.table */,
 			);
 			path = Parser;
 			sourceTree = "<group>";
