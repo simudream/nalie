@@ -25,6 +25,9 @@
 
 #ifndef ASTBuilder_h
 #define ASTBuilder_h
+#include <string>
+
+using namespace std;
 
 namespace AJSC {
 namespace Parser {
@@ -33,6 +36,7 @@ class ASTBuilder {
 public:
   int m_currentIdentifier;
 
+  void parse(string script);
 };
 
 }
