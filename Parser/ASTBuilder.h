@@ -11,9 +11,13 @@ namespace AJSC {
 namespace Parser {
 
 class ASTBuilder {
-  Lexer lexer;
+
 public:
-  int m_currentIdentifier;
+  string m_currentIdentifier;
+  int m_maxLength;
+  Lexer m_lexer;
+
+  ASTBuilder();
 
   void parse(string script);
 };
