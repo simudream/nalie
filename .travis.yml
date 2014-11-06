@@ -1,2 +1,2 @@
 install:
-  git submodule update --recursive
+  make get-deps
