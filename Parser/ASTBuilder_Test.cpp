@@ -5,6 +5,5 @@
 
 using namespace igloo;
 
-
 Describe(ASTBuilder) {
 };

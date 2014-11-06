@@ -5,7 +5,6 @@
 
 using namespace igloo;
 
-
 Describe(Lexer) {
   It(should_set_source) {
     AJSC::Parser::Lexer lexer("test");
