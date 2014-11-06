@@ -14,12 +14,15 @@ public:
   int m_currentIndex;
   int m_maxLength;
   int m_currentToken;
+  int m_line;
+  int m_column;
+  bool m_newline;
   string m_source;
 
   Lexer(const std::string source);
   Lexer();
 
-  bool getNextToken();
+  char getToken();
 };
 
 }
