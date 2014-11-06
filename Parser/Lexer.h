@@ -37,7 +37,7 @@ class Lexer {
 public:
   int m_currentIndex;
   int m_maxLength;
-  char m_currentToken;
+  int m_currentToken;
   string m_source;
 
   Lexer(const std::string source);

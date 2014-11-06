@@ -14,7 +14,6 @@ class ASTBuilder {
 
 public:
   string m_currentIdentifier;
-  int m_maxLength;
   Lexer m_lexer;
 
   ASTBuilder();
