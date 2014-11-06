@@ -24,7 +24,7 @@ char Lexer::getToken() {
     }
     return currentToken;
   } else {
-    return EOF;
+    return 0;
   }
 }
 

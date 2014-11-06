@@ -52,7 +52,7 @@ Describe(Lexer) {
     lexer.getToken();
     lexer.getToken();
     char currentToken = lexer.getToken();
-    Assert::That(currentToken, Equals(EOF));
+    Assert::That(currentToken, Equals(0));
   }
 
   It(should_be_able_to_set_line_number_to_current_row_number_whenever_it_encounter_new_line) {
