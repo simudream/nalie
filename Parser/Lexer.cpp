@@ -15,6 +15,7 @@ bool Lexer::getNextToken() {
     m_currentToken = m_source.at(m_currentIndex);
     return true;
   } else {
+    m_currentToken = EOF;
     return false;
   }
 }

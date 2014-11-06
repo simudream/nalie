@@ -33,4 +33,12 @@ Describe(Lexer) {
     Assert::That(lexer.m_currentIndex, Equals(1));
     Assert::That(lexer.m_currentToken, Equals('e'));
   }
+
+  It(should_return_eof_when_end_of_file) {
+    AJSC::Parser::Lexer lexer("te");
+    lexer.getNextToken();
+    lexer.getNextToken();
+    lexer.getNextToken();
+    Assert::That(lexer.m_currentToken, Equals(EOF));
+  }
 };
