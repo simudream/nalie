@@ -1,5 +1,6 @@
 
 namespace Identifiers {
+
 enum Identifier {
 
   // Special characters

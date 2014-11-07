@@ -5,10 +5,10 @@ SPECIFICATION_FILES = Specifications/TestRunner.cpp $(wildcard Parser/*.cpp)
 OUTPUT=ajs
 
 all:
-	g++ $(SOURCES)  -L $(SOURCE_DIRS) -I $(SOURCE_LINKS) -o $(OUTPUT)
+	llvm-g++ $(SOURCES)  -L $(SOURCE_DIRS) -I $(SOURCE_LINKS) $(OPTIONS) -o $(OUTPUT)
 
 test:
-	g++ $(SPECIFICATION_FILES) -I Includes/igloo -o Specifications/test
+	llvm-g++ $(SPECIFICATION_FILES) -I Includes/igloo -o Specifications/test
 	./Specifications/test
 
 get-deps:
