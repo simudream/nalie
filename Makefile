@@ -8,7 +8,6 @@ all:
 	clang++ $(SOURCES) -I $(SOURCE_LINKS) $(OPTIONS) -o $(OUTPUT)
 
 test:
-	clang++ -v
 	clang++ $(SPECIFICATION_FILES) -I Includes/igloo -o Specifications/test
 	./Specifications/test
 
