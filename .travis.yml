@@ -33,6 +33,3 @@ install:
 
 git:
   submodules: false
-
-script:
-  - make test
