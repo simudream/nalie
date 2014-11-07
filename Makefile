@@ -2,7 +2,7 @@ SOURCES = $(wildcard Parser/*.cpp Binaries/*.cpp)
 SOURCE_DIRS=Parser
 SOURCE_LINKS=Parser
 SPECIFICATION_FILES = Specifications/TestRunner.cpp $(wildcard Parser/*.cpp)
-OPTIONS = -std=c++11
+OPTIONS = -std=c++11 -stdlib=libc++
 OUTPUT=ajs
 
 all:
