@@ -37,7 +37,7 @@ char Lexer::getToken() {
     }
     return m_currentToken;
   } else {
-    return Identifiers::EOF_;
+    return Identifier::EOF_;
   }
 }
 

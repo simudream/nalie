@@ -65,7 +65,7 @@ Describe(Lexer) {
       lexer.getToken();
       lexer.getToken();
       char currentToken = lexer.getToken();
-      Assert::That(currentToken, Equals(Identifiers::EOF_));
+      Assert::That(currentToken, Equals(Identifier::EOF_));
     }
 
     It(should_be_able_to_set_line_number_to_current_row_number_whenever_it_encounter_new_line) {
@@ -106,11 +106,17 @@ Describe(Lexer) {
   };
 
   Describe(swallowWhiteSpace) {
-    It(should_swallow_white_space) {
+    It(should_swallow_white_space_when_standing_on_white_space) {
       AJSC::Parser::Lexer lexer("  test");
       lexer.swallowWhiteSpace();
       Assert::That(lexer.m_currentToken, Equals('t'));
       Assert::That(lexer.m_column, Equals(3));
+    }
+
+    It(should_swallow_white_space_when_not_standing_on_white_space) {
+      AJSC::Parser::Lexer lexer("  ");
+      lexer.swallowWhiteSpace();
+      Assert::That(lexer.m_currentToken, Equals(Identifier::EOF_));
     }
   };
 };

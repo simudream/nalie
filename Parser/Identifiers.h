@@ -1,5 +1,5 @@
 
-namespace Identifiers {
+namespace Identifier {
 
 enum Identifier {
 
