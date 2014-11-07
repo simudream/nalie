@@ -9,9 +9,6 @@ all:
 
 test:
 	clang++ $(SPECIFICATION_FILES) -I Includes/igloo -o Specifications/test
-	./Specifications/test
 
 get-deps:
 	git submodule update --recursive
-
-.PHONY: test
