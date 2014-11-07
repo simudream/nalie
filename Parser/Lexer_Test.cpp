@@ -18,6 +18,18 @@ Describe(Lexer) {
       Assert::That(lexer.m_currentIndex, Equals(0));
     }
 
+    It(should_set_current_token_first_token) {
+      AJSC::Parser::Lexer lexer("test");
+      Assert::That(lexer.m_currentToken, Equals('t'));
+    }
+
+    It(should_set_current_token_the_current_indexed_token) {
+      AJSC::Parser::Lexer lexer("test");
+      lexer.getToken();
+      lexer.getToken();
+      Assert::That(lexer.m_currentToken, Equals('e'));
+    }
+
     It(should_set_line_number_to_1) {
       AJSC::Parser::Lexer lexer("test");
       Assert::That(lexer.m_line, Equals(1));

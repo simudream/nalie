@@ -13,7 +13,7 @@ class Lexer {
 public:
   int m_currentIndex;
   int m_maxLength;
-  int m_currentToken;
+  char m_currentToken;
   int m_line;
   int m_column;
   bool m_newline;
@@ -23,6 +23,8 @@ public:
   Lexer();
 
   char getToken();
+  int getIdentifier();
+  void swallowWhiteSpace();
 };
 
 }

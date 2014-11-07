@@ -24,7 +24,7 @@ char Lexer::getToken() {
   }
 
   if(m_currentIndex < m_source.length()) {
-    char currentToken = m_source.at(m_currentIndex);
+    m_currentToken = m_source.at(m_currentIndex);
     m_currentIndex++;
     m_column++;
     if(m_newline) {
@@ -32,14 +32,27 @@ char Lexer::getToken() {
       m_column = 1;
       m_line++;
     }
-    if(currentToken == '\n') {
+    if(m_currentToken == '\n') {
       m_newline = true;
     }
-    return currentToken;
+    return m_currentToken;
   } else {
     return Identifiers::EOF_;
   }
 }
+
+// int Lexer::getIdentifier() {
+//   char currentToken = getToken();
+//   while(isspace(currentToken)) {
+//     currentToken = getToken();
+//   }
+
+
+// }
+
+// void Lexer::swallowWhiteSpace() {
+
+// }
 
 }
 }
