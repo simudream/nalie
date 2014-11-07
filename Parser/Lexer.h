@@ -23,7 +23,6 @@ public:
   Lexer();
 
   char getToken();
-  int getIdentifier();
 };
 
 }

@@ -18,7 +18,7 @@ public:
 
   ASTBuilder();
 
-  void parse(string script);
+  void parse(string source);
 };
 
 }

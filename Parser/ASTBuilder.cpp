@@ -11,8 +11,8 @@ namespace Parser {
 
 ASTBuilder::ASTBuilder(): m_currentIdentifier("") {}
 
-void Parser::ASTBuilder::parse(string script) {
-  m_lexer = Lexer(script);
+void Parser::ASTBuilder::parse(string source) {
+  m_lexer = Lexer(source);
   while(1) {
 
   }
