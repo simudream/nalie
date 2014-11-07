@@ -1,15 +1,28 @@
 
-#include "Lexer.h"
 #include <string>
 #include <cstring>
 #include <iostream>
-
-using namespace std;
+#include "Lexer.h"
+#include "Identifiers.h"
 
 namespace AJSC {
 namespace Parser {
 
+Lexer::Lexer() {}
+Lexer::Lexer(const std::string source):
+  m_currentIndex(0),
+  m_line(1),
+  m_column(0),
+  m_newline(false),
+  m_source(source),
+  m_maxLength(source.length()),
+  m_currentToken(source.at(0)) {}
+
 char Lexer::getToken() {
+  if(m_source.length() == 0) {
+    throw std::invalid_argument("Can not get next token if source is not set.");
+  }
+
   if(m_currentIndex < m_source.length()) {
     char currentToken = m_source.at(m_currentIndex);
     m_currentIndex++;
@@ -24,19 +37,9 @@ char Lexer::getToken() {
     }
     return currentToken;
   } else {
-    return 0;
+    return Identifiers::EOF_;
   }
 }
-
-Lexer::Lexer() {}
-Lexer::Lexer(const std::string source):
-  m_currentIndex(0),
-  m_line(1),
-  m_column(0),
-  m_newline(false),
-  m_source(source),
-  m_maxLength(source.length()),
-  m_currentToken(source.at(0)) {}
 
 }
 }

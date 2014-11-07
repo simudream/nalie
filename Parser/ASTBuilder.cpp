@@ -13,6 +13,9 @@ ASTBuilder::ASTBuilder(): m_currentIdentifier("") {}
 
 void Parser::ASTBuilder::parse(string script) {
   m_lexer = Lexer(script);
+  while(1) {
+
+  }
 }
 
 }
