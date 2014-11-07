@@ -104,4 +104,13 @@ Describe(Lexer) {
       Assert::That(LastException<std::logic_error>().what(), Is().Containing("Can not get next token if source is not set"));
     }
   };
+
+  Describe(swallowWhiteSpace) {
+    It(should_swallow_white_space) {
+      AJSC::Parser::Lexer lexer("  test");
+      lexer.swallowWhiteSpace();
+      Assert::That(lexer.m_currentToken, Equals('t'));
+      Assert::That(lexer.m_column, Equals(3));
+    }
+  };
 };

@@ -50,9 +50,11 @@ char Lexer::getToken() {
 
 // }
 
-// void Lexer::swallowWhiteSpace() {
-
-// }
+void Lexer::swallowWhiteSpace() {
+  while(isspace(m_currentToken)) {
+    m_currentToken = getToken();
+  }
+}
 
 }
 }
