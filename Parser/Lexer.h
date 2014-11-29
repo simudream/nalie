@@ -22,8 +22,11 @@ public:
   Lexer(const std::string source);
   Lexer();
 
+  // Get next token from source string.
   char getToken();
-  int getIdentifier();
+
+  // Swallows white space. It will stop lexing tokens when it encounters
+  // any non-whitespace characters
   void swallowWhiteSpace();
 };
 

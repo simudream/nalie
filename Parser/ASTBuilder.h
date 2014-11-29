@@ -19,6 +19,7 @@ public:
   ASTBuilder();
 
   void parse(string source);
+  void parseValueDeclaration();
 };
 
 }

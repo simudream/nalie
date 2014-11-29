@@ -41,15 +41,6 @@ char Lexer::getToken() {
   }
 }
 
-// int Lexer::getIdentifier() {
-//   char currentToken = getToken();
-//   while(isspace(currentToken)) {
-//     currentToken = getToken();
-//   }
-
-
-// }
-
 void Lexer::swallowWhiteSpace() {
   while(isspace(m_currentToken)) {
     m_currentToken = getToken();
