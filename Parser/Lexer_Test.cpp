@@ -98,6 +98,16 @@ Describe(Lexer) {
       Assert::That(lexer.m_column, Equals(1));
     }
 
+    It(should_be_able_to_set_line_string) {
+      AJSC::Parser::Lexer lexer("t\nest");
+      lexer.getToken();
+      Assert::That(lexer.m_lineString, Equals("t"));
+      lexer.getToken();
+      lexer.getToken();
+      lexer.getToken();
+      Assert::That(lexer.m_lineString, Equals("es"));
+    }
+
     It(should_throw_an_error_if_source_is_not_set) {
       AJSC::Parser::Lexer lexer;
       AssertThrows(std::logic_error, lexer.getToken());

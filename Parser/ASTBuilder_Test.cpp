@@ -8,7 +8,7 @@ using namespace igloo;
 Describe(ASTBuilder) {
   It(should_set_current_identifier) {
     AJSC::Parser::ASTBuilder ASTBuilder_;
-    ASTBuilder_.parse("let");
+    ASTBuilder_.parse("let test");
     Assert::That(ASTBuilder_.m_currentIdentifier, Equals("let"));
   }
 };

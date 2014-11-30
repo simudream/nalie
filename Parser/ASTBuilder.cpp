@@ -18,15 +18,17 @@ void ASTBuilder::parse(string source) {
     m_currentIdentifier += m_lexer.m_currentToken;
   }
 
-  // switch(m_currentIdentifier) {
-  //   case "let":
-  //     parseDeclaration();
-  //     break;
-  // }
+  if(m_currentIdentifier == "let") {
+    parseLetDeclaration();
+  }
 }
 
-void ASTBuilder::parseValueDeclaration() {
+void ASTBuilder::parseLetDeclaration() {
   m_lexer.swallowWhiteSpace();
+
+  if(!isalnum(m_lexer.m_currentToken)) {
+    throw invalid_argument("Expected a variable name after let keyword in " + m_lexer.getLine());
+  }
 }
 
 }

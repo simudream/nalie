@@ -15,6 +15,7 @@ public:
   int m_maxLength;
   char m_currentToken;
   int m_line;
+  string m_lineString;
   int m_column;
   bool m_newline;
   string m_source;
@@ -28,6 +29,9 @@ public:
   // Swallows white space. It will stop lexing tokens when it encounters
   // any non-whitespace characters
   void swallowWhiteSpace();
+
+  // Get current lexing line
+  string getLine();
 };
 
 }
